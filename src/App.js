@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CountdownClock from './components/CountdownClock';
 import './App.css';
 
 class App extends Component {
+  state = {
+    nextPasDagDate: new Date('2018-11-5:19:00'),
+    timeUntillPasDag: 0
+  }
+  constructor(props) {
+    super(props)
+    this.updateTimeUntillPasDag = this.updateTimeUntillPasDag.bind(this)
+    setInterval(this.updateTimeUntillPasDag, 1000)
+  }
+  updateTimeUntillPasDag() {
+    var diff = this.state.nextPasDagDate - new Date();
+    this.setState({
+      timeUntillPasDag: diff
+    });
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="waar-is-die-pas-container">
+      <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
       </div>
     );
   }

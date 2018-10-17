@@ -1,14 +1,32 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+}
+.countdown-clock-container {
+  height: 100vh;
+  background-color:#ffb6e3;
+}
+.countdown-clock {
+  padding-top:30vh;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 9vw;
+  padding:2%;
+  color: white;
+}
+.clock-number-text {
+  font-size: 3vw;
+}
+.countdown-clock > div {
+  display: inline-block;
+
+}
+.countdown-clock > .clock-number {
+  width: 23%;
+  border-radius: 5px;
+  background-color:rgba(0, 0, 0, .5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.countdown-clock > .clock-colon {
+  width: 2%;
 }
+
