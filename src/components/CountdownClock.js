@@ -37,6 +37,11 @@ const CountdownClock = props => (
                 <div className="clock-number-text">SECONDEN</div>
             </div>
         </div>
+        {/* <div className="countdown-clock-payment-link-container">
+            <a href="www.bunq.me/waarisdiepas" target=".blank" className="link-button">
+                <div className="countdown-clock-subtitle-text">WAAR IS DIE PAS??!?</div>
+            </a>
+        </div> */}
     </div>
 
 );
