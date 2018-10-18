@@ -1,4 +1,5 @@
 import React from 'react';
+import DonationButton from './DonationButton';
 
 var writable_days, writable_hours, writable_minutes, writable_seconds;
 
@@ -37,11 +38,7 @@ const CountdownClock = props => (
                 <div className="clock-number-text">SECONDEN</div>
             </div>
         </div>
-        {/* <div className="countdown-clock-payment-link-container">
-            <a href="www.bunq.me/waarisdiepas" target=".blank" className="link-button">
-                <div className="countdown-clock-subtitle-text">WAAR IS DIE PAS??!?</div>
-            </a>
-        </div> */}
+        <DonationButton></DonationButton>
     </div>
 
 );

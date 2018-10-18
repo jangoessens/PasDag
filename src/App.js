@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/react-fontawesome';
 import CountdownClock from './components/CountdownClock';
+import BunqComponent from './components/BunqComponent';
 import './App.css';
 
 class App extends Component {
