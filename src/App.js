@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    nextPasDagDate: new Date('2018-11-5:19:00'),
+    nextPasDagDate: new Date('2018-11-12:19:00'),
     timeUntillPasDag: 0
   }
   constructor(props) {
