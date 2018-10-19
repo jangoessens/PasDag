@@ -13,7 +13,7 @@ const DonationButton = props => (
                     <div class="sliding-button-content">
                         <div class="button-icon">
                             <FontAwesomeIcon icon="credit-card" spin="true" /></div>
-                        <div class="button-text">Stort op de pas!</div>
+                        <div class="button-text">Stort op die pas!</div>
                     </div>
                 </div>
             </a>
