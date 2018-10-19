@@ -11,6 +11,7 @@ class App extends Component {
   }
   constructor(props) {
     super(props)
+    document.title = "Waar is die Pas?";
     this.updateTimeUntillPasDag = this.updateTimeUntillPasDag.bind(this)
     setInterval(this.updateTimeUntillPasDag, 1000)
   }
