@@ -4,7 +4,7 @@ import DonationButton from './DonationButton';
 var writable_days, writable_hours, writable_minutes, writable_seconds;
 
 function calculateVariables(timeUntill) {
-    var days, hours, minutes, seconds;
+    var days, hours, minutes, seconds = 0;
     seconds = (timeUntill / 1000);
     writable_seconds = minTwoDigits(seconds % 60);
     minutes = (seconds / 60);

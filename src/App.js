@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    nextPasDagDate: new Date('2018-11-12:19:00'),
+    nextPasDagDate: this.NewDate('2018-11-12'),
     timeUntillPasDag: 0
   }
   constructor(props) {
@@ -16,15 +16,24 @@ class App extends Component {
     setInterval(this.updateTimeUntillPasDag, 1000)
   }
   updateTimeUntillPasDag() {
-    var diff = this.state.nextPasDagDate - new Date();
+    var diff = this.state.nextPasDagDate - this.NewDate();
     this.setState({
       timeUntillPasDag: diff
     });
   }
+  NewDate(str) {
+    var date = new Date();
+    if (str != null) {
+      str = str.split('-');
+      date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+      date.setUTCHours(0, 0, 0, 0);
+    }
+    return date;
+  }
   render() {
     return (
       <div className="waar-is-die-pas-container">
-      <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
+        <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
       </div>
     );
   }
