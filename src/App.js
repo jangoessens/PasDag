@@ -33,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="waar-is-die-pas-container">
+        hoi
         <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
       </div>
     );
