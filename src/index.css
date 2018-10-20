@@ -1,20 +1,22 @@
 body {
   margin: 0px;
 }
-.countdown-clock-container {
-  height: 100vh;
-  background-color:#ffb6e3;
+.waar-is-die-pas-container {
+    min-height: 100vh;
+      background-color:#ffb6e3;
   background:url("./bunq_background.png") center ;
   background-size: contain;
 }
+
 .countdown-clock {
   text-align: center;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 9vw;
+  font-size: 9vh;
   padding:2%;
   padding-top:30vh;
   color: white;
 }
+
 .clock-number-text {
   font-size: 3vw;
 }
@@ -22,26 +24,18 @@ body {
   display: inline-block;
 
 }
-.countdown-clock > .clock-number {
+.countdown-clock .clock-number {
+  min-width: 188px;
+  min-height: 100px;
   width: 23%;
   background-color:rgba(0, 0, 0, .35);
-}
-
-.countdown-clock > .clock-colon {
-  width: 2%;
-}
-
-/* Countdown clock button */
-
-
-.countdown-clock-subtitle-text {
-  color: white;
+  margin: 1%;
 }
 
 /* Donation button */
 .donation-button-container {
   width: 100%;
-  height:50px;
+  height:70px;
 }
 .donation-button-container a {
   text-decoration: none;
@@ -49,7 +43,7 @@ body {
 }
 .link-button {
   text-align: center;
-  display: flex;
+  display: block;
   align-content: center;
   width:100%;
  }
@@ -105,3 +99,14 @@ body {
   background-image: linear-gradient(to right, #238647 , #88CC54, #3395C0 );
 
 }
+
+
+@media (max-width: 600px) {
+  .countdown-clock {
+    padding-top: 10vh;
+  }
+  .donation-button-container {
+    margin-top: 5vh;
+    text-align: center;
+}
+ }

@@ -1,5 +1,6 @@
 import React from 'react';
 import DonationButton from './DonationButton';
+import ClockBlock from './ClockBlock';
 
 var writable_days, writable_hours, writable_minutes, writable_seconds;
 
@@ -20,23 +21,12 @@ function minTwoDigits(variable) {
 }
 const CountdownClock = props => (
     <div className="countdown-clock-container">
+        {calculateVariables(props.timeUntillPasDag)}
         <div className="countdown-clock">
-            {calculateVariables(props.timeUntillPasDag)}
-            <div className="clock-number clock-days">{writable_days}
-                <div className="clock-number-text">DAGEN</div>
-            </div>
-            <div className="clock-colon"></div>
-            <div className="clock-number clock-hours">{writable_hours}
-                <div className="clock-number-text">UREN</div>
-            </div>
-            <div className="clock-colon"></div>
-            <div className="clock-number clock-minutes">{writable_minutes}
-                <div className="clock-number-text">MINUTEN</div>
-            </div>
-            <div className="clock-colon"></div>
-            <div className="clock-number clock-seconds">{writable_seconds}
-                <div className="clock-number-text">SECONDEN</div>
-            </div>
+            <ClockBlock displayNumber={writable_days} displayLabel="DAGEN"></ClockBlock>
+            <ClockBlock displayNumber={writable_hours} displayLabel="UREN"></ClockBlock>
+            <ClockBlock displayNumber={writable_minutes} displayLabel="MINUTEN"></ClockBlock>
+            <ClockBlock displayNumber={writable_seconds} displayLabel="SECONDEN"></ClockBlock>
         </div>
         <DonationButton></DonationButton>
     </div>

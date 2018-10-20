@@ -9,11 +9,11 @@ const DonationButton = props => (
     <div className="donation-button-container">
         <div className="donation-button-link-container">
             <a href="http://www.bunq.me/waarisdiepas" target="_blank" className="link-button">
-                <div class="sliding-button">
-                    <div class="sliding-button-content">
-                        <div class="button-icon">
-                            <FontAwesomeIcon icon="credit-card" spin="YES" /></div>
-                        <div class="button-text">Stort op die pas!</div>
+                <div className="sliding-button">
+                    <div className="sliding-button-content">
+                        <div className="button-icon">
+                            <FontAwesomeIcon icon="credit-card" spin={true} /></div>
+                        <div className="button-text">Stort op die pas!</div>
                     </div>
                 </div>
             </a>
