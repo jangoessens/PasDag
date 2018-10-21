@@ -20,7 +20,7 @@ const PasDag = props => (
     <div className="PasDag-container">
         <div className="PasDag-page">
             <div className="beer-background">
-                <div className="beer-foam">
+                <div className="beer-foam shake-after-fall-down">
                     {generatedBubbles}
                 </div>
                 <DonationButton></DonationButton>
