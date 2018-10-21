@@ -1,12 +1,25 @@
+/* GENERAL STYLING */
 body {
   margin: 0px;
 }
+
+/* LANDING PAGE */
 .waar-is-die-pas-container {
-    min-height: 100vh;
-      background-color:#ffb6e3;
+
+}
+/* COUNTDOWN PAGE */
+
+.countdown-page {
+  min-height: 100vh;
+  background-color:#ffb6e3;
   background:url("./bunq_background.png") center ;
   background-size: contain;
 }
+.fall-down {
+  animation: fall 1 2.5s cubic-bezier(.76,.16,.89,.26) forwards;
+  transform-origin: bottom;
+}
+
 
 .countdown-clock {
   text-align: center;
@@ -92,13 +105,47 @@ body {
 
 }
 
-/* Bunq Component */
-
-.bunq-component {
+/* PasDag Component */
+.PasDag-page {
+  position: absolute;
+  top:0;
   height: 100vh;
-  background-image: linear-gradient(to right, #238647 , #88CC54, #3395C0 );
-
+  width: 100vw;
+  z-index: -1;
+  /* ,#F1D744,#E7CA55 */
 }
+
+.shake-after-fall-down {
+  animation: shake 0.5s;
+  animation-delay: 2.5s;
+  animation-iteration-count: 1;
+}
+
+
+/* BEER BACKGROUND */
+
+.beer-background {
+  width: 100%;
+  height: 100%;
+  background-color: #E7CA55;
+}
+
+.beer-foam {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #F5F5F5;
+}
+
+.foam-bubble {
+  position: absolute;
+  top: 0;
+  width: 10vh;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+}
+
 
 
 @media (max-width: 600px) {
@@ -110,3 +157,29 @@ body {
     text-align: center;
 }
  }
+
+ /* KEYFRAME METHODS */
+/* FALL ANIMATION */
+@keyframes fall {
+  0% {
+    transform : rotatex(0deg) skewy(0deg);
+  }
+  100% {
+        transform: rotatex(90deg) skewx(-20deg);
+        display: none;
+  }
+}
+ /* SHAKE ANIMATION */
+@keyframes shake {
+  0% { transform: translate(4px, 4px) rotate(0deg); }
+  10% { transform: translate(-2px, -2px) rotate(-1deg); }
+  20% { transform: translate(-4px, 0px) rotate(1deg); }
+  30% { transform: translate(4px, 2px) rotate(0deg); }
+  40% { transform: translate(2px, -2px) rotate(1deg); }
+  50% { transform: translate(-2px, 2px) rotate(-1deg); }
+  60% { transform: translate(-4px, 2px) rotate(0deg); }
+  70% { transform: translate(4px, 2px) rotate(-1deg); }
+  80% { transform: translate(-2px, -2px) rotate(1deg); }
+  90% { transform: translate(4px, 4px) rotate(0deg); }
+  100% { transform: translate(2px, -2px) rotate(-1deg); }
+}
