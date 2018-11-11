@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { library } from '@fortawesome/react-fontawesome';
 import CountdownClock from './components/CountdownClock';
 import BunqComponent from './components/BunqComponent';
+import PasDag from './components/PasDag';
 import './App.css';
 
 class App extends Component {
   state = {
-    nextPasDagDate: this.NewDate('2018-11-12'),
+    // nextPasDagDate: this.NewDate('2018-12-9-23'),
+     nextPasDagDate: this.NewDate('2018-11-11-23'),
     timeUntillPasDag: 0
   }
   constructor(props) {
@@ -26,14 +28,24 @@ class App extends Component {
     if (str != null) {
       str = str.split('-');
       date.setUTCFullYear(str[0], str[1] - 1, str[2]);
-      date.setUTCHours(0, 0, 0, 0);
+      date.setUTCHours(str[3], 0, 0, 0);
     }
     return date;
   }
+  todayIsPasDag() {
+    return (this.state.timeUntillPasDag < 0);
+  }
+  ShowOnLandingPage() {
+    if (this.todayIsPasDag()) {
+      return <PasDag></PasDag>;
+    }
+    return <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
+  }
   render() {
+    var renderLandingPage = this.ShowOnLandingPage();
     return (
       <div className="waar-is-die-pas-container">
-        <CountdownClock timeUntillPasDag={this.state.timeUntillPasDag}></CountdownClock>
+        {renderLandingPage}
       </div>
     );
   }

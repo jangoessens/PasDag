@@ -20,15 +20,17 @@ function minTwoDigits(variable) {
     return (variable < 10 ? '0' : '') + Math.floor(variable);
 }
 const CountdownClock = props => (
-    <div className="countdown-clock-container">
-        {calculateVariables(props.timeUntillPasDag)}
-        <div className="countdown-clock">
-            <ClockBlock displayNumber={writable_days} displayLabel="DAGEN"></ClockBlock>
-            <ClockBlock displayNumber={writable_hours} displayLabel="UREN"></ClockBlock>
-            <ClockBlock displayNumber={writable_minutes} displayLabel="MINUTEN"></ClockBlock>
-            <ClockBlock displayNumber={writable_seconds} displayLabel="SECONDEN"></ClockBlock>
+    <div className={"countdown-page " + props.appendClass}>
+        <div className='countdown-clock-container '>
+            {calculateVariables(props.timeUntillPasDag)}
+            <div className="countdown-clock">
+                <ClockBlock displayNumber={writable_days} displayLabel="DAGEN"></ClockBlock>
+                <ClockBlock displayNumber={writable_hours} displayLabel="UREN"></ClockBlock>
+                <ClockBlock displayNumber={writable_minutes} displayLabel="MINUTEN"></ClockBlock>
+                <ClockBlock displayNumber={writable_seconds} displayLabel="SECONDEN"></ClockBlock>
+            </div>
+            <DonationButton></DonationButton>
         </div>
-        <DonationButton></DonationButton>
     </div>
 
 );
