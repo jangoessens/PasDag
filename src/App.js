@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { library } from '@fortawesome/react-fontawesome';
 import CountdownClock from './components/CountdownClock';
-import BunqComponent from './components/BunqComponent';
 import PasDag from './components/PasDag';
 import './App.css';
+import HowToPasDag from './components/HowToPasDag';
 
 class App extends Component {
   state = {
-    nextPasDagDate: this.NewDate('2018-12-9-23'),
-    //  nextPasDagDate: this.NewDate('2018-11-11-23'),
+    nextPasDagDate: this.NewDate('2019-01-15-20'),
     timeUntillPasDag: 0
   }
   constructor(props) {
@@ -44,9 +43,13 @@ class App extends Component {
   render() {
     var renderLandingPage = this.ShowOnLandingPage();
     return (
-      <div className="waar-is-die-pas-container">
-        {renderLandingPage}
+      <div>
+        <div className="waar-is-die-pas-container">
+          {renderLandingPage}
+        </div>
+        <HowToPasDag></HowToPasDag>
       </div>
+
     );
   }
 }

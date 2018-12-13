@@ -47,9 +47,11 @@ body {
 
 /* Donation button */
 .donation-button-container {
-  position: absolute;
+  position: relative;
+  padding: 20px 0px;
   width: 100%;
-  height:70px;
+  height:110px;
+  text-align:center;
 }
 .donation-button-container a {
   text-decoration: none;
@@ -64,12 +66,11 @@ body {
 
 /* Sliding button */
 .donation-button-container {
-  margin-top: 200px;
   text-align: center;
 }
 .donation-button-link-container {
-  text-align: center;
-  display: inline-block;
+  position: relative;
+  margin: auto auto;
   width: 200px;
   height: 70px;
 }
@@ -106,6 +107,191 @@ body {
 
 }
 
+/* How to page */
+.how-to-pasdag-container {
+  min-height: 100vh;
+  background-color: #E7CA55;
+}
+
+.how-to-title-container {
+  display: inline-flex;
+  align-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.how-to-title {
+  text-align:center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+.how-to-card-container {
+  text-align: center;
+}
+.how-to-card {
+  vertical-align: middle;
+  max-width: 400px;
+  max-height: 400px;
+  width: 30vw;
+  height: 30vw;
+  text-align: center;
+  display:inline-block;
+}
+
+.how-to-card-background {
+  margin: 0 auto;
+  width: 80%;
+  height:80%;
+  background-color: rgba(0, 0, 0, .35);
+  border-radius: 50%;
+  position: relative;
+}
+.how-to-card-title {
+  position: relative;
+}
+/* How to Step 1 */
+.background-icon {
+  position: absolute;
+  display:inline-flex;
+  overflow: hidden;
+}
+
+.wallet-icon {
+  left: 10%;
+  top: 40%;
+}
+.money-icon {
+  animation: moneytransition 3s infinite;
+  animation-timing-function: ease-out;
+}
+
+.pas-icon {
+  left:calc(100% - 70px);
+  top:40%;
+}
+
+@keyframes moneytransition {
+  0% {
+    left: 10px;
+    top:40%;
+    visibility: visible;
+    transform: scale(0.5);
+
+  }
+  30% {
+    left:40%;
+    top:20%;
+    transform: scale(1.1);
+  }
+  60% {
+    left:calc(100% - 70px);
+    top:40%;
+    transform: scale(.4);
+    visibility:hidden;
+  }
+  100% {
+     left:calc(100% - 70px);
+    top:40%;
+    transform: scale(.4);
+    visibility:hidden;
+  }
+}
+
+/* How to part 2 */
+.user-icon {
+  position: absolute;
+  top:calc(50% - 24px);
+  left:calc(50% - 22px);
+}
+
+.check-icon {
+  position: absolute;
+  top:calc(50% - 24px);
+  left:calc(50% - 22px);
+  transform: scale(6);
+  animation:stamp 3s infinite;
+  opacity: 0;
+}
+
+@keyframes stamp {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(6);
+  }
+  70% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    transform: scale(1);
+    opacity:1;
+  }
+  96% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity:1;
+  }
+}
+
+/* How to step 3 */
+
+.beer-icon-1 {
+  /* left: 10%; */
+  top:calc(50% - 24px);
+  transform: rotatez(25deg) scalex(-1);
+  animation: beer1 1.5s infinite;
+  animation-timing-function: cubic-bezier(.29,-0.28,.65,.95);
+  left:calc(50% - 48px);
+}
+.beer-icon-2 {
+  transform: rotatez(-25deg);
+  /* right: 10%; */
+  top:calc(50% - 24px);
+  animation: beer2 1.5s infinite;
+ animation-timing-function: cubic-bezier(.29,-0.28,.65,.95);
+}
+
+
+@keyframes beer1 {
+  0% {
+    left: 10%;
+    transform: rotatez(25) scalex(-1);
+  }
+  80% {
+    transform: rotatez(25) scalex(-1);
+  }
+  81% {
+    left: calc(50% - 40px);
+    transform: rotatez(0) scalex(-1);
+  }
+  100% {
+    left: calc(50% - 60px);
+    transform: rotatez(0) scalex(-1);
+  }
+}
+@keyframes beer2 {
+  0% {
+    right: 10%;
+    transform: rotatez(25) ;
+  }
+  80% {
+    transform: rotatez(25) ;
+  }
+  81% {
+    right: calc(50% - 40px);
+    transform: rotatez(0) ;
+  }
+  100% {
+    right: calc(50% - 60px);
+    transform: rotatez(0);
+  }
+}
 /* PasDag Component */
 .PasDag-page {
   position: absolute;
@@ -203,16 +389,6 @@ body {
 }
 
 
-@media (max-width: 600px) {
-  .countdown-clock {
-    padding-top: 10vh;
-  }
-  .donation-button-container {
-    margin-top: 5vh;
-    text-align: center;
-}
- }
-
  /* SHAKING WORDS */
 
  .animated-words-container {
@@ -287,3 +463,15 @@ body {
 }
 
 
+
+/* Phone screen */
+@media (max-width: 600px) {
+  .countdown-clock {
+    padding-top: 10vh;
+  }
+
+.how-to-card {
+  width: 100%;
+  height: 100vw;
+}
+ }
