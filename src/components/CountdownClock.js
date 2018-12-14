@@ -24,10 +24,10 @@ function minTwoDigits(variable) {
 
 function updateTitle() {
     if (document.hasFocus()) {
-        document.title = "WAAR IS DIE HYPE";
+        document.title = String.fromCodePoint(0x1F308) + "WAAR IS DIE HYPE" + String.fromCodePoint(0x1F308) ;
     }
     else {
-        document.title = "Nog " + writable_days + " Dagen!!";
+        document.title = String.fromCodePoint(0x1F37B) + "Nog " + writable_days + " Dagen!!" + String.fromCodePoint(0x1F37B) ;
     }
 }
 const CountdownClock = props => (
