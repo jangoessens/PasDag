@@ -14,14 +14,27 @@ function calculateVariables(timeUntill) {
     writable_hours = minTwoDigits(hours % 24);
     days = (hours / 24);
     writable_days = minTwoDigits(days);
+    updateTitle();
+
 }
 
 function minTwoDigits(variable) {
     return (variable < 10 ? '0' : '') + Math.floor(variable);
 }
+
+function updateTitle() {
+    if (document.hasFocus()) {
+        document.title = "WAAR IS DIE HYPE";
+    }
+    else {
+        document.title = "Nog " + writable_days + " Dagen!!";
+    }
+}
 const CountdownClock = props => (
     <div className={"countdown-page " + props.appendClass}>
         <div className='countdown-clock-container '>
+
+            {updateTitle}
             {calculateVariables(props.timeUntillPasDag)}
             <div className="countdown-clock">
                 <ClockBlock displayNumber={writable_days} displayLabel="DAGEN"></ClockBlock>
