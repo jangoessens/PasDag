@@ -7,7 +7,8 @@ import HowToPasDag from './components/HowToPasDag';
 
 class App extends Component {
   state = {
-    nextPasDagDate: this.NewDate('2019-01-15-20'),
+
+    nextPasDagDate: this.NewDate('2019-01-14-23'),
     timeUntillPasDag: 0
   }
   constructor(props) {
@@ -43,11 +44,17 @@ class App extends Component {
   render() {
     var renderLandingPage = this.ShowOnLandingPage();
     return (
+<<<<<<< HEAD
       <div>
         <div className="waar-is-die-pas-container">
           {renderLandingPage}
         </div>
         <HowToPasDag></HowToPasDag>
+=======
+
+      <div className="waar-is-die-pas-container">
+        {renderLandingPage}
+>>>>>>> master
       </div>
 
     );
