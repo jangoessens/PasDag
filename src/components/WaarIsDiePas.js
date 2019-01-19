@@ -7,7 +7,11 @@ const WaarIsDiePas = props => (
             <div className="animated-word animation animation-index-3">DIE</div>
             <div className="animated-word  animation animation-index-4">PAS</div>
         </div>
+        <div class="row">
+            <h1>Happy BDay Nina </h1>
+        </div>
     </div>
+
 );
 
 export default WaarIsDiePas;
