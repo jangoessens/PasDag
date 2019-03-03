@@ -31,9 +31,7 @@ function updateTitle() {
     }
 }
 const CountdownClock = props => (
-    <div className={"countdown-page " + props.appendClass}>
-        <div className='countdown-clock-container '>
-
+    <div>
             {updateTitle}
             {calculateVariables(props.timeUntillPasDag)}
             <div className="countdown-clock">
@@ -43,7 +41,6 @@ const CountdownClock = props => (
                 <ClockBlock displayNumber={writable_seconds} displayLabel="SECONDEN"></ClockBlock>
             </div>
             <DonationButton></DonationButton>
-        </div>
     </div>
 
 );
